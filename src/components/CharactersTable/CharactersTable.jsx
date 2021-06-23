@@ -39,6 +39,8 @@ const CharactersTable = (props) => {
             width: '15%',
         },
     ]
+
+    const handleRowKey = record => record.name
     return (
         <Table
             columns={columns}
@@ -46,6 +48,7 @@ const CharactersTable = (props) => {
             loading={props.loading}
             onChange={props.onChange}
             pagination={props.pagination}
+            rowKey={handleRowKey}
         />
     )
 }
